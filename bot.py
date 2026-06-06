@@ -120,7 +120,7 @@ async def start_webserver(application: Application):
     await runner.setup()
     
     # Render memberikan port secara otomatis
-    port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 7860))
     site = web.TCPSite(runner, '0.0.0.0', port)
     await site.start()
     logging.info(f"Server web penyamaran berjalan di port {port}")
